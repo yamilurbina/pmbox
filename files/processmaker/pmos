@@ -1,0 +1,34 @@
+# Please change the ip address with your server ip address and
+# the ServerName with you own subdomains.
+
+NameVirtualHost *:80
+
+#processmaker virtual host 
+<VirtualHost *:80 >
+  ServerName "_"
+  DocumentRoot /opt/processmaker/workflow/public_html
+  DirectoryIndex index.html index.php
+  <Directory  "/opt/processmaker/workflow/public_html">
+    AddDefaultCharset UTF-8
+
+    AllowOverRide none
+    Options FollowSymlinks
+    Order allow,deny
+    Allow from all
+
+    RewriteEngine on
+    RewriteRule ^.*/(.*)$ sysGeneric.php [NC,L]
+
+    ExpiresActive On    
+    ExpiresDefault "access plus 1 day" 
+    ExpiresByType image/gif "access plus 1 day"
+    ExpiresByType image/png "access plus 1 day"
+    ExpiresByType image/jpg "access plus 1 day"
+    ExpiresByType text/css "access plus 1 day"
+    ExpiresByType text/javascript "access plus 1 day"
+
+    AddOutputFilterByType DEFLATE text/html        
+    
+  </Directory>
+</VirtualHost>
+
