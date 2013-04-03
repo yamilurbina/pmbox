@@ -8,10 +8,10 @@ Vagrant.configure("2") do |config|
   # Port 80 goes to 8080
   config.vm.network :forwarded_port, guest: 80, host: 8080
 
-  # config.vm.network :private_network, ip: "192.168.33.10"
+  # We use the private network; but feel free to change it to public
+  config.vm.network :private_network, ip: "23.10.86.26"
 
-  # We use the public network; but feel free to change it to private
-  config.vm.network :public_network
+  # config.vm.network :public_network
 
   # Mount the plugins folder to make development easier
   config.vm.synced_folder "./plugins", "/opt/plugins/"

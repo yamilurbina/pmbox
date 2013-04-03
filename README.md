@@ -1,7 +1,7 @@
 # PMBox
 PMBox stands for ProcessMaker Box, an easy solution to virtualize a server and provision it with Puppet to install and start using ProcessMaker.
 
-Apart from ProcessMaker, PMBox installs git, oh-my-zsh and PHPMyAdmin as additional tools, so it's ready for plugin development and testing.
+Apart from ProcessMaker, PMBox installs git and PHPMyAdmin as additional tools, so it's ready for plugin development and testing.
 
 ### Works on any major OS
 From Windows to Linux and Mac OS X, PMBox works without any extra requirements or configuration hassles.
