@@ -1,9 +1,7 @@
 Vagrant.configure("2") do |config|
 
   # The base PMBox
-  config.vm.box = "pmbox"
-  # PMBox url
-  config.vm.box_url = "https://s3.amazonaws.com/ThePMBox/pm.box"
+  config.vm.box = "ubuntu/trusty64"
 
   # Port 80 goes to 8080
   config.vm.network :forwarded_port, guest: 80, host: 8080
